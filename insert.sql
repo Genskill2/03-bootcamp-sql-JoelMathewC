@@ -23,14 +23,15 @@ values
 insert into subjects(id,name)
 values
 
-	(1,'C, UNIX, Technology'),
-	(2,'Go, Technology'),
-	(3,'UNIX, Technology'),
-	(4,'Technology, Science Fiction'),
-	(5,'Technology, Productivity'),
-	(6,'Productivity, Psychology'),
-	(7,'Science Fiction, Politics'),
-	(8,'Politics, History');
+	(1,'C'),
+	(2,'UNIX'), 
+	(3,'Technology'),
+	(4,'Go'),
+	(5,'Science Fiction'),
+	(6,'Productivity'),
+	(7,'Psychology'),
+	(8,'Politics'),
+	(9,'History');
 	
 insert into books_subjects(book,subject)
 values ((select id from books where title='The C Programming Language'),(select id from subjects where name='C, UNIX, Technology')), ((select id from books where title='The Go Programming Language'),(select id from subjects where name='Go, Technology')),((select id from books where title='The UNIX Programming Environment'),(select id from subjects where name='UNIX, Technology')),((select id from books where title='Cryptonomicon'),(select id from subjects where name='Technology, Science Fiction')),((select id from books where title='Deep Work'),(select id from subjects where name='Technology, Productivity')),((select id from books where title='Atomic Habits'),(select id from subjects where name='Productivity, Psychology')),((select id from books where title='The City and The City'),(select id from subjects where name='Science Fiction, Politics')),((select id from books where title='The Great War for Civilisation'),(select id from subjects where name='Politics, History'));
